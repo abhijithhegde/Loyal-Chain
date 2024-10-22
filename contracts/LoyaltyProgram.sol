@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity >=0.4.22 <0.9.0;
 
 import "./LoyaltyToken.sol";
 
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract LoyaltyProgram is Ownable(msg.sender) {
+contract LoyaltyProgram is Ownable {
     IERC20 public loyaltyToken;
 
     mapping(address => bool) public merchants;
